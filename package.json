@@ -37,7 +37,8 @@
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "lint:style": "stylelint --fix \"**/*.{css,scss}\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
   },
   "keywords": [],
   "author": "narci",
@@ -73,6 +74,7 @@
     "gh-pages": "^6.2.0",
     "globals": "^15.11.0",
     "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
     "postcss": "^8.4.47",
     "postcss-html": "^1.7.0",
     "postcss-less": "^6.0.0",

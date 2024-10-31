@@ -32,7 +32,8 @@
     "gen:component": "pnpm run -C cli gen",
     "start:verdaccio": "pnpm verdaccio",
     "publish:local": "pnpm publish --registry http://localhost:4873/",
-    "publish:serve": "pnpm publish --registry https://registry.npmjs.org/"
+    "publish:serve": "pnpm publish --registry https://registry.npmjs.org/",
+    "docs:deploy": "pnpm run docs:build && gh-pages -d docs/.vitepress/dist"
   },
   "keywords": [],
   "author": "narci",

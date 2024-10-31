@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "vitepress dev",
-    "build": "vitepress build",
+    "build": "vitepress build --build",
     "serve": "vitepress serve"
   },
   "keywords": [],
@@ -19,6 +19,7 @@
     "element-plus": "^2.8.6"
   },
   "devDependencies": {
+    "minimist": "^1.2.8",
     "vitepress": "^1.4.2"
   }
 }

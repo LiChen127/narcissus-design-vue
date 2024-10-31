@@ -1,6 +1,12 @@
 import { DefaultTheme, defineConfig } from 'vitepress';
 import { componentPreview, containerPreview } from '@vitepress-demo-preview/plugin';
 import { components } from '../components';
+import minimist from 'minimist';
+
+const argv = minimist(process.argv.slice(2));
+const build = argv.build || false;
+
+
 
 const nav: DefaultTheme.NavItem[] = [
   { text: '指南', link: '/guide/' },
@@ -28,7 +34,7 @@ export default defineConfig({
   title: 'narcissus-design-vue',
   description: 'Narcissus-Desigin-Vue Vue3+Ts组件库',
   lang: 'cn-ZH',
-  base: '/',
+  base: build ? '/narcissus-design-vue/' : '/', // 1.修改组件库上下文路径 2.添加dev/build判断取得base的值
   lastUpdated: true,
   themeConfig: {
     logo: '/logo.png',

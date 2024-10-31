@@ -31,7 +31,8 @@
     "docs:preview": "pnpm run -C docs serve",
     "gen:component": "pnpm run -C cli gen",
     "start:verdaccio": "pnpm verdaccio",
-    "publish:local": "pnpm publish --registry http://localhost:4873/"
+    "publish:local": "pnpm publish --registry http://localhost:4873/",
+    "publish:serve": "pnpm publish --registry http://registry.npmjs.org/"
   },
   "keywords": [],
   "author": "narci",

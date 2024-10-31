@@ -5,12 +5,11 @@ import { ComponentInfo } from '../domain/component-info';
  */
 
 export const sfcTemplate = (lineNameWithPrefix: string, lowCamelName: string): string => {
-  return `
-<script lang="ts" setup name="${lineNameWithPrefix}">
-  import { defineProps } from 'vue';
-  import { ${lowCamelName}Props } from './types';
+  return `<script lang="ts" setup name="${lineNameWithPrefix}">
+import { defineProps } from 'vue';
+import { ${lowCamelName}Props } from './types';
 
-  defineProps(${lowCamelName}Props);
+defineProps(${lowCamelName}Props);
 </script>
 
 <template>

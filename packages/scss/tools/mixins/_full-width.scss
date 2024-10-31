@@ -1,7 +1,7 @@
 /// Full Width Containers in Limited Width Parents
 /// @param {String} $support-type [margin] - 有三个可选值`margin`、`position`、`translate`
 /// @param {Number} $min-width [null] - 父容器最小宽度
-/// @example
+/// @examples
 /// //SCSS
 /// .full-width {
 ///   @include full-width(margin, 960px);

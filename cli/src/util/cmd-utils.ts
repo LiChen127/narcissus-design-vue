@@ -8,5 +8,5 @@ export const execCmd = (cmd: string) => new Promise((resolve, reject) => {
       reject(new Error(stderr));
     }
     return resolve('');
-  })
-})
+  });
+});

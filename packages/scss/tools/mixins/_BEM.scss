@@ -42,7 +42,7 @@ $modifierSeparator: '--';
 
 /// @param {string} $block - BEM中的Block
 /// @content
-/// @example
+/// @examples
 ///  //SCSS
 ///  @include b(block) {
 ///     background: red;
@@ -73,7 +73,7 @@ $modifierSeparator: '--';
 
 /// @param {string} $element - BEM中的Element
 /// @content
-/// @example
+/// @examples
 ///  //SCSS
 ///  @include b(block) {
 ///     background: red;
@@ -117,7 +117,7 @@ $modifierSeparator: '--';
 
 /// @param {string} $element - BEM中的Modify
 /// @content
-/// @example
+/// @examples
 ///  //SCSS
 ///  @include b(block) {
 ///     background: red;

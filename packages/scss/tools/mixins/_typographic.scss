@@ -4,7 +4,7 @@
 /// @param {string} $max-vw - 视窗最大宽度(viewport max-width)
 /// @param {string} $min-value - 最小值
 /// @param {string} $max-value - 最大值
-/// @example
+/// @examples
 ///  //SCSS
 ///  $minScreen: 20rem; // $min-vw
 ///  $maxScreen: 50rem; // $max-vw
@@ -57,11 +57,11 @@
 /// @param {number} $base-line-height [1.2] - Base line-height (Define $base-line-height)
 /// @param {number} $base-font-size [16px] - Default font size
 /// @param {string} $unit ["px"] - Unit to output (Define $base-unit)
-/// @example scss
+/// @examples scss
 /// body {
 /// 	@include body();
 /// }
-/// @example css
+/// @examples css
 /// body {
 ///     font-size: 18px;
 ///     line-height: 22px;
@@ -104,7 +104,7 @@
 /// @param {number} $base-value [18px] - Optional call with a different base font size when using em (Define $base-font-size)
 /// @param {number} $scale-factor [1.618] - Scale factor constants
 /// @param {number} $base-line-height [1.2] - Base line-height
-/// @example scss
+/// @examples scss
 /// h1 {
 /// 	@include heading(3, "em");
 /// }
@@ -121,7 +121,7 @@
 /// 	@include heading(0);
 /// }
 ///
-/// @example css
+/// @examples css
 /// h1 {
 ///     font-size: 4.22222em;
 ///     line-height: 1.15789em;
@@ -200,11 +200,11 @@
 /// @param {string} $unit ["px"] - Unit to output(Define $base-unit)
 /// @param {number} $base-value [18px] - Optional call with a different base font size when using em (Define $base-font-size)
 /// @param {number} $base-line-height [1.2] - Base line height
-/// @example scss
+/// @examples scss
 /// p, ul, ol, pre, table, blockquote {
 /// 	@include margins();
 /// }
-/// @example css
+/// @examples css
 /// p, ul, ol, pre, table, blockquote {
 ///    margin-bottom: 22px;
 ///    margin-top: 22px;

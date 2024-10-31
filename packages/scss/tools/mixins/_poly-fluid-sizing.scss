@@ -4,7 +4,7 @@
 /// @param $map - A SASS map of viewport unit and size value pairs
 /// @requires function linear-interpolation
 /// @requires function map-sort
-/// @example
+/// @examples
 ///   @include poly-fluid-sizing('font-size', (576px: 22px, 768px: 24px, 992px: 34px));
 /// @author Jake Wilson <jake.e.wilson@gmail.com>
 @mixin poly-fluid-sizing($property, $map) {

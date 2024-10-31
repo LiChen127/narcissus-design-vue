@@ -2,7 +2,7 @@
 /// Calculate the least square fit linear regression of provided values
 /// @param {map} $map - A Sass map of viewport width and size value combinations
 /// @return Linear equation as a calc() function
-/// @example
+/// @examples
 ///   $map: (576: 24, 768: 24, 992: 34)
 ///   font-size: leastSquaresFit($map)
 /// @author Jake Wilson <jake.e.wilson@gmail.com>

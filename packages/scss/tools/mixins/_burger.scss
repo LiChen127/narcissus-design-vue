@@ -17,7 +17,7 @@
 /// @param {string} $color  [#000] - 线条颜色
 /// @param {number} $border-radius  [0] - 圆角
 /// @param {number} $transition-duration  [0] - 动效持续时间
-/// @example
+/// @examples
 /// //SCSS
 /// .burger {
 ///  @include burger;
@@ -97,7 +97,7 @@
 }
 
 /// Select parts of the burger
-/// @example
+/// @examples
 /// //SCSS
 /// .burger {
 ///  @include burger-top {
@@ -118,7 +118,7 @@
   }
 }
 
-/// @example
+/// @examples
 /// //SCSS
 /// .burger {
 ///  @include burger-top {
@@ -134,7 +134,7 @@
     @content;
   }
 }
-/// @example
+/// @examples
 /// //SCSS
 /// .burger {
 ///  @include burger-middle {
@@ -150,7 +150,7 @@
     @content;
   }
 }
-/// @example
+/// @examples
 /// //SCSS
 /// .burger {
 ///  @include burger-bottom {

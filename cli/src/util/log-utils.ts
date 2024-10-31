@@ -7,7 +7,7 @@ export const r = (msg: string, showIcon = true): void => {
   } else {
     console.log(chalk.red(msg));
   }
-}
+};
 
 export const g = (msg: string, showIcon = true): void => {
   if (showIcon) {
@@ -15,9 +15,8 @@ export const g = (msg: string, showIcon = true): void => {
   } else {
     console.log(chalk.green(msg));
   }
-}
+};
 
 export const c = (msg: string): void => {
   console.log(logSymbols.info, chalk.cyan(msg));
-}
-
+};

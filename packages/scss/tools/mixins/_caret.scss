@@ -5,7 +5,7 @@
 /// @param {String} $direction 三角形方向
 /// @param {String} $border-color 边框颜色
 /// @param {String} $background-color 背景颜色
-/// @example
+/// @examples
 /// //SCSS
 /// .caret{
 ///   @include caret(absolute,50px,1px,bottom,red,#ccc);

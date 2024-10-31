@@ -25,10 +25,10 @@ const questions: QuestionCollection = [
     message: 'Input the component type: ',
     choices: [
       'tsx',
-      'vue'
-    ]
+      'vue',
+    ],
   },
-]
+];
 
 // 实现交互(注入)
 const createNewComponent = async (componentName: string, description: string, componentType: string) => {
@@ -45,15 +45,14 @@ const createNewComponent = async (componentName: string, description: string, co
     await updateComponentLib(componentInfo);
     // 5.更新组件库文档
     initDoc(componentInfo);
-
   } catch (error: any) {
     r(error.message);
   } finally {
     closeLoading();
   }
-}
+};
 export const createComponent = () => {
   inquirer.prompt(questions).then(({ componentName, description, componentType }) => {
-    createNewComponent(componentName, description, componentType)
-  })
-}
+    createNewComponent(componentName, description, componentType);
+  });
+};

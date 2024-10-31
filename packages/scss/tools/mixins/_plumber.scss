@@ -11,7 +11,7 @@
 /// @param {Number} $leading-bottom [null] - Bottom leading* as a multiple of grid height (Integer)
 /// @param {Number} $line-height [null] - Line height as a multiple of grid height (Positive integer)
 /// @param {Boolean} $use-baseline-origin [null] - Set the origin of leadings to the baseline
-/// @example
+/// @examples
 /// //SCSS
 /// p {
 ///     @include plumber(

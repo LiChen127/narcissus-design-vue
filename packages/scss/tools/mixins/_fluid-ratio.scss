@@ -1,7 +1,7 @@
 /// Fluid aspect rations for RWD background images
 /// @param {list} $large-size - 大的背景图片尺寸
 /// @param {list} $small-size - 小的背景图片尺寸
-/// @example
+/// @examples
 /// //SCSS
 /// .fluid-ratio{
 ///   	@include fluid-ratio(800 400,300 150);

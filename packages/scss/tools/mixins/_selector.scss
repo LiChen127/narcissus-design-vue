@@ -2,7 +2,7 @@
 /// @param {string} $old-context - 选择器
 /// @param {string} $new-context - 选择器
 /// @content
-/// @example
+/// @examples
 /// //SCSS
 /// .tabs {
 ///     .tab {
@@ -40,7 +40,7 @@
 }
 
 /// @param {list} $states - 选择器组
-/// @example
+/// @examples
 /// //SCSS
 /// .tab {
 /// 	background: red;
@@ -87,7 +87,7 @@
 /// @param {string} $el - 伪元素`:before`或`:after`
 /// @param {number} $el-width - 伪元素的`width`
 /// @param {number} $el-height - 伪元素的 `height`
-/// @example
+/// @examples
 /// //SCSS
 /// .icon-toggle {
 ///   width: 1.56em;
@@ -149,7 +149,7 @@
 
 
 /// Parent Hover
-/// @example
+/// @examples
 /// //SCSS
 /// .nav-menu {
 ///   li {
@@ -201,7 +201,7 @@
 /// @param {number} $index
 /// @param {string} $status
 /// @param {string} $place [prefix/suffix/prepend/append]
-/// @example
+/// @examples
 /// //SCSS
 /// .a .b, .a .c {
 ///   @include parent-nth-status(1, ':hover', suffix) {
@@ -277,7 +277,7 @@
 /// @param {string} $status
 /// @param {string} $place [prefix/suffix/prepend/append]
 /// @content
-/// @example
+/// @examples
 /// //SCSS
 /// .tab {
 ///   a {
@@ -351,7 +351,7 @@
 /// @access private
 /// @param  {list | string} $selector - A single selector
 /// @return {string}                  - The last simple selector in $selector
-/// @example scss
+/// @examples scss
 ///   $result: _last-simple-selector(ul > li); // li
 
 @function _last-simple-selector($selector) {
@@ -397,11 +397,11 @@
 
 /// Query when total items is at least N items
 /// @param  {number} $count - Quantity to match (equal or more)
-/// @example scss - Make the items color red when there are 4 items or more
+/// @examples scss - Make the items color red when there are 4 items or more
 ///   ul li {
 ///     @include at-least(4) { color: red; }
 ///   }
-/// @example scss - Make the items color blue when there are 6 items or more and use '*' (element agnostic) as the item selector
+/// @examples scss - Make the items color blue when there are 6 items or more and use '*' (element agnostic) as the item selector
 ///   ul li {
 ///     @include at-least(6, '*') { color: blue; }
 ///   }
@@ -432,11 +432,11 @@
 
 /// Query when total items is at most N items
 /// @param  {number} $count - Quantity to match (equal or less)
-/// @example scss - Make the items color red when there are 4 items or less
+/// @examples scss - Make the items color red when there are 4 items or less
 ///   ul li {
 ///     @include at-most(4) { color: red; }
 ///   }
-/// @example scss - Make the items color blue when there are 6 items or less and use '*' (element agnostic) as the item selector
+/// @examples scss - Make the items color blue when there are 6 items or less and use '*' (element agnostic) as the item selector
 ///   ul li {
 ///     @include at-most(6, '*') { color: blue; }
 ///   }
@@ -468,11 +468,11 @@
 /// Query when total items is at least X items and at most Y items
 /// @param  {number} $at-least - Lower quantity of items to match
 /// @param  {number} $at-most - Higher quantity of items to match
-/// @example scss - Make the items color red when there are at least 2 and at most 4 items
+/// @examples scss - Make the items color red when there are at least 2 and at most 4 items
 ///   ul li {
 ///     @include between(4, 8) { color: red; }
 ///   }
-/// @example scss - Make the items color blue when there are at least 6 items and at most 10 items and use '*' (element agnostic) as the item selector
+/// @examples scss - Make the items color blue when there are at least 6 items and at most 10 items and use '*' (element agnostic) as the item selector
 ///   ul li {
 ///     @include between(6, 10, '*') { color: blue; }
 ///   }
@@ -512,11 +512,11 @@
 
 /// Query when total items is exactly N items
 /// @param  {number} $count - Quantity to match (equal)
-/// @example scss - Make the items color red when there are exactly 4 items
+/// @examples scss - Make the items color red when there are exactly 4 items
 ///   ul li {
 ///     @include exactly(4) { color: red; }
 ///   }
-/// @example scss - Make the items color blue when there are exactly 6 items and use '*' (element agnostic) as the item selector
+/// @examples scss - Make the items color blue when there are exactly 6 items and use '*' (element agnostic) as the item selector
 ///   ul li {
 ///     @include exactly(6, '*') { color: blue; }
 ///   }
@@ -714,7 +714,7 @@
 /// range selector mixin
 /// @param {number} $start - 开始值
 /// @param {number} $end - 结束值
-/// @example
+/// @examples
 /// //SCSS
 /// li {
 ///  @include select-range(3,5){
@@ -734,7 +734,7 @@
 /// mod query mixin
 /// @param {number} $mod - 整除倍数
 /// @param {number} $remainder - 余数
-/// @example
+/// @examples
 /// //SCSS
 /// li{
 ///  @include mod-list(3,1){

@@ -9,7 +9,7 @@
 /// @param {Number} $margin [0 0] - Top and bottom margin as a multiple of grid height (One two integers)
 /// @param {String} $border [0px 0px] - Top and bottom border width (One or two non-negative px values or 0s)
 /// @param {Number} $padding [0] - Top and bottom padding as a multiple of grid height (One or two non-negative integers)
-/// @example
+/// @examples
 /// //SCSS
 /// blockquote {
 ///     @include plumber-box(

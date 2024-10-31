@@ -4,7 +4,7 @@
 /// @param  {Number} $digits [0] - Digits to output
 /// @param  {String} $mode [round] - (round|ceil|floor) How to round a number
 /// @return {Number} - A rounded number
-/// @example SCSS
+/// @examples SCSS
 ///     decimal-round(0.333)    => 0
 ///     decimal-round(0.333, 1) => 0.3
 ///     decimal-round(0.333, 2) => 0.33
@@ -49,7 +49,7 @@
 /// @param  {Number} $number - A number to round
 /// @param  {Number} $digits [0] - Digits to output
 /// @return {Number} - A ceiled number
-/// @example SCSS
+/// @examples SCSS
 ///     decimal-ceil(0.333)    => 1
 ///     decimal-ceil(0.333, 1) => 0.4
 ///     decimal-ceil(0.333, 2) => 0.34
@@ -68,7 +68,7 @@
 /// @param  {Number} $number - A number to round
 /// @param  {Number} $digits [0] - Digits to output
 /// @return {Number} - A floored number
-/// @example SCSS
+/// @examples SCSS
 ///     decimal-floor(0.333)    => 0
 ///     decimal-floor(0.333, 1) => 0.3
 ///     decimal-floor(0.333, 2) => 0.33

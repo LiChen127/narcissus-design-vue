@@ -1,8 +1,7 @@
-@import "./acss/flex";
-@import "./acss/mp";
-@import "./base";
-@import "./components"
-// BEM + ITCSS + ACSS
+@import url('./acss/flex');
+@import url('./acss/mp');
+@import url('./base');
+@import url('./components') // BEM + ITCSS + ACSS
 
 // base层: 最基础的层次，包括变量的定义，通用的基础样式和定制基础样式
 // tools层: 提供通用的工具函数

@@ -5,20 +5,24 @@ import { fooProps } from './type';
 const props = defineProps(fooProps);
 const { msg } = toRefs(props);
 
-
 const onClick = () => {
   console.log('点击按钮测试', msg.value);
-}
+};
 </script>
 
 <template>
- <div class="narcissus-button">
-  <h1>水仙花</h1>
-  <div class="narcissus-button__description">
-    msg is {{ msg }}
+  <div class="narcissus-button">
+    <h1>水仙花</h1>
+    <div class="narcissus-button__description">
+      msg is {{ msg }}
+    </div>
+    <el-button
+      type="primary"
+      @click="onClick"
+    >
+      点击我
+    </el-button>
   </div>
-  <el-button type="primary" @click="onClick">点击我</el-button>
- </div>
 </template>
 
 <style lang='scss' scoped>

@@ -1,9 +1,8 @@
-
 <script lang="ts" setup name="narcissus-loading">
-  import { defineProps } from 'vue';
-  import { loadingProps } from './types';
+import { defineProps } from 'vue';
+import { loadingProps } from './types';
 
-  defineProps(loadingProps);
+defineProps(loadingProps);
 </script>
 
 <template>

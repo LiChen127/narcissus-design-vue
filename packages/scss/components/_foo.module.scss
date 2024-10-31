@@ -2,8 +2,8 @@
 @use '../tools/index.scss' as tools;
 
 // 使用 @use 规则导入其他模块
-@use "../acss/mp" as mp;
-@use "../base/index.scss" as baseVar; // 确保这里的路径和文件名正确
+@use '../acss/mp' as mp;
+@use '../base/index.scss' as baseVar; // 确保这里的路径和文件名正确
 
 // .b-yyg-foo {
 //   color: baseVar.$primary-color; // 使用正确的模块命名空间

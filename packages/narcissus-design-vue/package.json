@@ -1,0 +1,19 @@
+{
+  "name": "@narcissus-design-vue/narcissus-design-vue",
+  "version": "1.0.0",
+  "description": "组件库入口",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf ../../lib && vue-tsc --noEmit && vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@narcissus-design-vue/foo": "workspace:*"
+  },
+  "devDependencies": {
+    "rimraf": "^6.0.1",
+    "vite-plugin-dts": "^4.3.0"
+  }
+}

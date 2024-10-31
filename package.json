@@ -1,0 +1,68 @@
+{
+  "name": "narcissus-design-vue",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "./lib/narcissus-design-vue.umd.js",
+  "module": "./lib/narcissus-design-vue.es.js",
+  "types": "./lib/narcissus-design-vue/index.d.ts",
+  "files": [
+    "./lib",
+    "package.json",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "require": "./lib/narcissus-design-vue.umd.js",
+      "import": "./lib/narcissus-design-vue.es.js"
+    }
+  },
+  "scripts": {
+    "dev:dev": "pnpm run -C example dev:dev",
+    "dev:uat": "pnpm run -C example dev:uat",
+    "dev:prod": "pnpm run -C example dev:prod",
+    "build:dev": "pnpm run -C example build:dev",
+    "build:uat": "pnpm run -C example build:uat",
+    "build:prod": "pnpm run -C example build:prod",
+    "preview:example": "pnpm run -C example preview",
+    "build:lib": "pnpm run -C packages/yyg-admin-ui build",
+    "docs:dev": "pnpm run -C docs dev",
+    "docs:build": "pnpm run -C docs build",
+    "docs:preview": "pnpm run -C docs serve",
+    "gen:component": "pnpm run -C cli gen",
+    "start:verdaccio": "pnpm verdaccio",
+    "publish:local": "pnpm publish --registry http://localhost:4873/"
+  },
+  "keywords": [],
+  "author": "narci",
+  "license": "ISC",
+  "workspaces": [
+    "packages/*",
+    "cli",
+    "docs",
+    "example"
+  ],
+  "packageManager": "pnpm@9.12.1+sha512.e5a7e52a4183a02d5931057f7a0dbff9d5e9ce3161e33fa68ae392125b79282a8a8a470a51dfc8a0ed86221442eb2fb57019b0990ed24fab519bf0e1bc5ccfc4",
+  "dependencies": {
+    "vue": "^3.5.12"
+  },
+  "devDependencies": {
+    "@types/node": "^22.8.4",
+    "@typescript-eslint/eslint-plugin": "^8.12.2",
+    "@typescript-eslint/parser": "^8.12.2",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "@vitejs/plugin-vue-jsx": "^4.0.1",
+    "eslint": "^9.13.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-vue": "^9.30.0",
+    "sass": "^1.80.5",
+    "typescript": "^5.6.3",
+    "verdaccio": "^6.0.1",
+    "vite": "^5.4.10",
+    "vite-plugin-eslint": "^1.8.1",
+    "vue-tsc": "^2.1.8"
+  }
+}

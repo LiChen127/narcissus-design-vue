@@ -6,12 +6,10 @@ import minimist from 'minimist';
 const argv = minimist(process.argv.slice(2));
 const build = argv.build || false;
 
-
-
 const nav: DefaultTheme.NavItem[] = [
   { text: '指南', link: '/guide/' },
   { text: '组件', link: '/components/foo' },
-]
+];
 
 const sidebar: DefaultTheme.Sidebar = {
   '/guide': [
@@ -20,15 +18,15 @@ const sidebar: DefaultTheme.Sidebar = {
       items: [
         { text: '组件库介绍', link: '/guide/' },
         { text: '快速开始', link: '/guide/quickstart' },
-      ]
+      ],
     },
   ],
   '/components': [{
     items: [
-      ...components
-    ]
-  }]
-}
+      ...components,
+    ],
+  }],
+};
 
 export default defineConfig({
   title: 'narcissus-design-vue',
@@ -41,7 +39,7 @@ export default defineConfig({
     siteTitle: 'NARCISSUS-DESIGN-VUE',
     outline: 3,
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/vuejs/vitepress' },
     ],
     nav,
     sidebar,
@@ -53,8 +51,8 @@ export default defineConfig({
     },
     lineNumbers: true,
     config(md) {
-      md.use(componentPreview)
-      md.use(containerPreview)
-    }
-  }
-})
+      md.use(componentPreview);
+      md.use(containerPreview);
+    },
+  },
+});

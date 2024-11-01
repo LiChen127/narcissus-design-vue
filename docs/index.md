@@ -1,7 +1,7 @@
 ---
 layout: home
 
-title: NARCISSUS-DESIGN-VUE 
+title: NARCISSUS-DESIGN-VUE
 editLink: true
 lastUpdated: true
 hero:

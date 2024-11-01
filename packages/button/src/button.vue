@@ -1,17 +1,11 @@
-<script lang="ts" setup name="narcissus-button">
-import { defineProps } from 'vue';
-import { buttonProps } from './types';
+<script setup lang='ts'>
 
-defineProps(buttonProps);
 </script>
 
 <template>
-  <div>
-    narcissus-button
-  </div>
+  <div />
 </template>
 
-<style scoped lang="scss">
-  .narcissus-button {
-  }
+<style lang='scss' scoped>
+
 </style>

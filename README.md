@@ -22,7 +22,7 @@ components: 实现各个组件的样式,命名方式采用BEM方式
 命名层次, BEM规定将所有的组件分为三个层级:
 1.Block: 代表页面中独立可复用的底层组件;
 2.Element: Block 内部的组成元素，通常用于定义块的内部结构和样式;
-3.Modifier: 用于改变Block/Element的外观和行为
+3.Modifier: 用于改变Block/Element的外观和行为;
 命名规定,BEM三层架构之下, 我们用命名规范来体现这种层级关系
 所有命名通常都用小写字母，单词之间用 单个短线（-） 分隔，不用大驼峰、小驼峰等方式。
 Element 名以所属的 Block 名称为前缀，用 双下划线（__） 分隔；
@@ -56,44 +56,35 @@ cli用于自动化我们开发一个组件的流程: 通过一行命令实现一
 pnpm run gen:component
 这一行命令会通过一个命令构建一个完整的组件，只需要提供组件名，组件中文名，组件类型，即可完成组件注册和文档搭建
 
-如何发包到npm
-本地发包流程
-登录verdaccio：首先，你需要登录到你的私有npm仓库，这里使用的是verdaccio。使用命令行登录：
+### 如何开发?
+在生成的packages的组件下面进行组件开发
+以Button举个例子
+packages/src/Button下面的文件挨个分析
+package.json下面的name **@narcissus-design-vue/@Buttton**就代表这个组件的名字
+Button/index.ts 入口文件, 用于提供利用vue特性提供install方法注入
+Button/Button.vue就是组件的核心模块
+Button/types.ts用于定义各种prop，其他的组件需要的类型，prop类型等等
 
+### 如何测试?
+测试分为三种，一种是开发阶段测试，一种是本地部署测试，还有上传到npm测试
+当然开发阶段的测试是pre-important的,一定是最前置的，优先级要最高
+必须要做测试
 
-pnpm login --registry http://localhost:4873/
-输入你的用户名和密码。
+#### 如何开发阶段测试?
+只需要在exaples这个同步测试站点下面进行组件库包的同步更新即可
+如何启动测试站点
+pnpm run dev:dev
+进行相关组件的使用即可
 
-打包lib：在发布之前，需要先构建你的组件库。使用以下命令进行打包：
+#### 如何发包
+本地发包
+首先登录verdaccio进行登录
+pnpm run build:lib 首先进行打包lib
+pnpm run publish:local利用verdaccio，进行本地部署发包
+利用本地verdaccio进行测试
+即从http://localhost:4873/源进行下载组件库包测试
 
-
+发包到npm
+同样需要build
 pnpm run build:lib
-这将生成打包后的文件，准备发布。
-
-发布到本地仓库：使用以下命令将你的组件库发布到本地的verdaccio仓库：
-
-
-pnpm run publish:local
-这将使你的组件库在本地仓库可用，便于测试。
-
-测试本地发布：确保你的组件库可以从 http://localhost:4873/ 下载并正常使用。
-
-发包到npm流程
-构建组件库：与本地发包相同，首先需要构建你的组件库：
-
-
-pnpm run build:lib
-发布到npm：使用以下命令将你的组件库发布到npm：
-
-
 pnpm run publish:serve
-这将使你的组件库在npm上可用。
-
-注意事项
-确保在发布之前，你的组件库已经通过了所有的测试。
-在发布到npm之前，确保你的 package.json 文件中的 name、version 和其他元数据是正确的。
-如果你还没有npm账号，需要先注册一个。
-如果你使用的是私有仓库，确保你的仓库地址和认证信息是正确的。
-发布到npm后，其他人可以通过 npm install 或 pnpm add 命令安装你的组件库。
-通过上述步骤，你可以将你的 narcissus-design-vue 组件库发布到本地仓库或npm，供其他开发者使用。
-

@@ -79,10 +79,10 @@ pnpm run dev:dev<br>
 #### 如何发包
 本地发包<br>
 首先登录verdaccio进行登录<br>
+pnpm run start:verdaccio<br>
 pnpm run build:lib 首先进行打包lib<br>
 pnpm run publish:local利用verdaccio，进行本地部署发包<br>
 利用本地verdaccio进行测试<br>
-即从http://localhost:4873/源进行下载组件库包测试<br>
 
 发包到npm<br>
 同样需要build<br>

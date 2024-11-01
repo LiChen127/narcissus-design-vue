@@ -1,6 +1,6 @@
 packages:
-  - packages/*
-  - cli
-  - docs
-  - examples
+  - 'packages/*'
+  - 'cli'
+  - 'docs'
+  - 'examples'
   - '!**/test/**'

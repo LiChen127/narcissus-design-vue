@@ -1,23 +1,23 @@
 /**
  * 创建组件库目录及其文件
  */
-import { ComponentInfo } from "../domain/component-info";
+import { ComponentInfo } from '../domain/component-info';
 import fs from 'fs';
-import path from "path";
-import { execCmd } from "../util/cmd-utils";
-import { Config } from "../config";
+import path from 'path';
+import { execCmd } from '../util/cmd-utils';
+import { Config } from '../config';
 import { g } from '../util/log-utils';
 import { indexTemplate, sfcTemplate, tsxTemplate, typesTemplate } from '../util/template-utils';
 
 export const initComponent = (componentInfo: ComponentInfo) => new Promise((resolve, reject) => {
   if (fs.existsSync(componentInfo.fullPath)) {
-    return reject(new Error('组件已存在'))
+    return reject(new Error('组件已存在'));
   }
   // 1.创建组件根目录
   fs.mkdirSync(componentInfo.fullPath);
 
   // 2.初始化package.json
-  execCmd(`cd ${componentInfo.fullPath} && pnpm init`).then(r => {
+  execCmd(`cd ${componentInfo.fullPath} && pnpm init`).then((r) => {
     // 3.修改package.json
     updatePackageJson(componentInfo);
 
@@ -39,10 +39,10 @@ export const initComponent = (componentInfo: ComponentInfo) => new Promise((reso
     g('component init success');
 
     return resolve(componentInfo);
-  }).catch(e => {
+  }).catch((e) => {
     return reject(e);
-  })
-})
+  });
+});
 
 // 修改package.json文件
 const updatePackageJson = (componentInfo: ComponentInfo) => {
@@ -55,7 +55,7 @@ const updatePackageJson = (componentInfo: ComponentInfo) => {
     content = content.replace(lineName, nameWithLib);
     fs.writeFileSync(packageJsonPath, content);
   }
-}
+};
 
 // 创建组件
 const createSrcIndex = (componentInfo: ComponentInfo) => {
@@ -67,17 +67,16 @@ const createSrcIndex = (componentInfo: ComponentInfo) => {
   }
   const fileFullName = `${componentInfo.fullPath}/src/${componentInfo.lineName}.${componentInfo.type}`;
   fs.writeFileSync(fileFullName, content);
-}
+};
 
 // 创建src下的types声明文件
 const createSrcTypes = (componentInfo: ComponentInfo) => {
   const content = typesTemplate(componentInfo.lowCamelName, componentInfo.upCamelName);
   const fileFullName = `${componentInfo.fullPath}/src/types.ts`;
   fs.writeFileSync(fileFullName, content);
-}
+};
 
 // 创建index.ts
 const createIndex = (componentInfo: ComponentInfo) => {
   fs.writeFileSync(`${componentInfo.fullPath}/index.ts`, indexTemplate(componentInfo));
-}
-
+};

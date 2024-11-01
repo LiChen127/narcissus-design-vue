@@ -1,7 +1,7 @@
 import inquirer, { QuestionCollection } from 'inquirer';
 import { ComponentInfo } from '../domain/component-info';
 import { closeLoading, showLoading } from '../util/loading-utils';
-import { g, r } from '../util/log-utils';
+import { r } from '../util/log-utils';
 import { initComponent } from '../service/init-component';
 import { initScss } from '../service/init-scss';
 import { updateComponentLib } from '../service/update-component-lib';
@@ -44,7 +44,7 @@ const createNewComponent = async (componentName: string, description: string, co
     // 4.更新组件库入口
     await updateComponentLib(componentInfo);
     // 5.更新组件库文档
-    initDoc(componentInfo);
+    await initDoc(componentInfo);
   } catch (error: any) {
     r(error.message);
   } finally {

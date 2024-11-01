@@ -4,18 +4,18 @@
  * 2.在scss/components/index.scss 中导入 _xxx.module.scss
  */
 
-import { ComponentInfo } from "../domain/component-info";
-import path, { resolve } from "path";
+import { ComponentInfo } from '../domain/component-info';
+import path, { resolve } from 'path';
 import { scssTemplate } from '../util/template-utils';
 import fs from 'fs';
-import { g } from "../util/log-utils";
+import { g } from '../util/log-utils';
 
 const updateComponentScssIndex = (scssRootPath: string, lineName: string): void => {
   const indexScssPath = path.resolve(scssRootPath, 'components/index.scss');
   const content = fs.readFileSync(indexScssPath).toString();
   const newContent = content.substring(0, content.length) + `@use "${lineName}.module";\n`;
   fs.writeFileSync(indexScssPath, newContent);
-}
+};
 
 /**
  * 创建组件库scss文件，并在scss/components/index.scss中引入该文件
@@ -38,4 +38,4 @@ export const initScss = (componentInfo: ComponentInfo) => new Promise((resolve, 
     g('component scss init success');
   }
   resolve(componentInfo);
-})
+});

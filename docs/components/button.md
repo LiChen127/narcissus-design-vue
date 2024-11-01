@@ -3,15 +3,19 @@
 
 ## 基本使用
 
-<preview path="../demos/button/button-1.vue" title="基本使用" description=" "></preview>
+<preview path="../demos/button/button-1.vue" title="使用样例" description=" "></preview>
 
+## 禁用使用
+
+<preview path="../demos/button/button-2.vue" title="使用样例" description=" "></preview>
 ## 组件 API
 
 ### Attributes 属性
 
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 |  ----  | ----  | ----  | ----  | ----  |
-|  type| 定义按钮类型  | String  | primary, dashed, warn, error|  |
+|  type| 定义按钮类型  | String  | primary, dashed, warn, error| '' |
+|  disabled| 定义按钮是否禁用  | Boolean  | true, false | false |
 
 ### Methods 方法
 

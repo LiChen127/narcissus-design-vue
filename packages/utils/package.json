@@ -2,7 +2,7 @@
   "name": "@narcissus-design-vue/utils",
   "version": "1.0.0",
   "description": "工具函数",
-  "main": "index.ts",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

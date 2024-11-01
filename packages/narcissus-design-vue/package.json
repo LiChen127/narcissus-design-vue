@@ -2,7 +2,7 @@
   "name": "@narcissus-design-vue/narcissus-design-vue",
   "version": "1.0.0",
   "description": "组件库入口",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "build": "rimraf ../../lib && vue-tsc --noEmit && vite build"
   },

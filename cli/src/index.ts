@@ -9,9 +9,6 @@ export const mainEntry = () => {
   program.command('create')
     .description('create a new component')
     .alias('c')
-    .action(() => {
-      console.log('创建组件');
-    })
     .action(createComponent);
 
   program.parse(process.argv);

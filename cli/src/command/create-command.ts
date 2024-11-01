@@ -20,7 +20,7 @@ const questions: QuestionCollection = [
     default: '',
   },
   {
-    trpe: 'list',
+    type: 'list',
     name: 'componentType',
     message: 'Input the component type: ',
     choices: [
@@ -33,7 +33,7 @@ const questions: QuestionCollection = [
 // 实现交互(注入)
 const createNewComponent = async (componentName: string, description: string, componentType: string) => {
   console.log(componentName, description, componentType);
-  showLoading('Generating..., please wait...');
+  showLoading('Generating, please wait...');
   try {
     // 1.构造 ComponentInfo对象
     const componentInfo = new ComponentInfo(componentName, description, componentType);

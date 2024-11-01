@@ -34,7 +34,7 @@ export const updateComponentLib = async (componentInfo: ComponentInfo) => {
   const libPath = path.resolve(componentInfo.parentPath, Config.COMPONENT_LIB_NAME);
 
   // 1.添加新创建的组件到依赖中
-  await execCmd(`cd ${libPath} && pnpm install ${componentInfo.nameWithLib}`);
+  await execCmd(`cd ${libPath} && pnpm install ${componentInfo.nameWithLib} --link-workspace-packages=true`);
   // 2.更新入口 index.ts
   updateComponentLibIndex(libPath, componentInfo);
 

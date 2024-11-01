@@ -60,19 +60,19 @@ pnpm run gen:component
 本地发包流程
 登录verdaccio：首先，你需要登录到你的私有npm仓库，这里使用的是verdaccio。使用命令行登录：
 
-sh
+
 pnpm login --registry http://localhost:4873/
 输入你的用户名和密码。
 
 打包lib：在发布之前，需要先构建你的组件库。使用以下命令进行打包：
 
-sh
+
 pnpm run build:lib
 这将生成打包后的文件，准备发布。
 
 发布到本地仓库：使用以下命令将你的组件库发布到本地的verdaccio仓库：
 
-sh
+
 pnpm run publish:local
 这将使你的组件库在本地仓库可用，便于测试。
 
@@ -81,11 +81,11 @@ pnpm run publish:local
 发包到npm流程
 构建组件库：与本地发包相同，首先需要构建你的组件库：
 
-sh
+
 pnpm run build:lib
 发布到npm：使用以下命令将你的组件库发布到npm：
 
-sh
+
 pnpm run publish:serve
 这将使你的组件库在npm上可用。
 

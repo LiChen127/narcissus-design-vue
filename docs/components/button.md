@@ -5,9 +5,12 @@
 
 <preview path="../demos/button/button-1.vue" title="使用样例" description=" "></preview>
 
-## 禁用使用
+## 禁用状态
 
 <preview path="../demos/button/button-2.vue" title="使用样例" description=" "></preview>
+
+## size
+<preview path="../demos/button/button-3.vue" title="使用样例" description=" "></preview>
 ## 组件 API
 
 ### Attributes 属性
@@ -16,6 +19,7 @@
 |  ----  | ----  | ----  | ----  | ----  |
 |  type| 定义按钮类型  | String  | primary, dashed, warn, error| '' |
 |  disabled| 定义按钮是否禁用  | Boolean  | true, false | false |
+|  size| 定义按钮的大小  | String  | mini,small,medium | '' |
 
 ### Methods 方法
 

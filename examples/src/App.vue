@@ -19,6 +19,10 @@ const disabled = ref(true)
       <narcissus-button type="warn" :disabled="disabled">Warn</narcissus-button>
       <narcissus-button type="error">Error</narcissus-button>
       <narcissus-button type="error" :disabled="disabled">Error</narcissus-button>
+      <narcissus-button type="error" :disabled="disabled">Error</narcissus-button>
+      <narcissus-button type="error" :disabled="disabled" size="mini">Error</narcissus-button>
+      <narcissus-button type="error" :disabled="disabled" size="small">Error</narcissus-button>
+      <narcissus-button type="error" :disabled="disabled" size="medium">Error</narcissus-button>
     </div>
   </div>
 </template>

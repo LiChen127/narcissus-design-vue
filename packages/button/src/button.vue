@@ -17,17 +17,17 @@ const disabled = computed(() => {
   return props.disabled;
 });
 
-// // 禁用样式
-// const disabledStyle = computed(() => {
-//   return {
-//     [`narcissus-button--${props.type}`]: props.type,
-//   };
-// });
+// buttonSize
+const buttonSize = computed(() => {
+  return {
+    [`narcissus-button--${props.size}`]: props.size,
+  };
+});
 </script>
 
 <template>
   <button
-    :class="[buttonStyle, { disabled: disabled }]"
+    :class="[buttonStyle, { disabled: disabled }, buttonSize]"
     class="narcissus-button"
     :disabled="disabled"
   >
@@ -40,7 +40,7 @@ const disabled = computed(() => {
   display: inline-block;
   white-space: nowrap;
   line-height: 1;
-  height: 35px;
+  height: 40px;
   cursor: pointer;
   background-color: #fff;
   border: 0.5px solid rgb(219, 219, 219);
@@ -56,6 +56,26 @@ const disabled = computed(() => {
     opacity: 0.6;
     border: 1px solid  rgba(51, 40, 40, 0.5);
     background-color:  rgba(189, 179, 179, 0.5);
+  }
+
+  &:hover {
+    background-color: rgb(230, 229, 226);
+  }
+
+  &--medium  {
+    height: 38px;
+    line-height: 15px;
+    padding: 6px 10px;
+  }
+
+  &--small  {
+    height: 35px;
+    padding: 4px 8px;
+  }
+
+  &--mini  {
+    height: 30px;
+    padding: 2px 4px;
   }
 
   &--primary {

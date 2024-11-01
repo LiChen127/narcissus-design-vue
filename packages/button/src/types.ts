@@ -11,6 +11,11 @@ export const buttonProps = {
     type: Boolean,
     default: false,
   },
+  size: {
+    required: false,
+    type: String,
+    default: '',
+  },
 } as const;
 
 export type ButtonProps = ExtractPropTypes<typeof buttonProps>;

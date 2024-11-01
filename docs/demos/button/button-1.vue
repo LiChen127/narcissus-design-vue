@@ -23,8 +23,6 @@
 .btns-container {
   display: flex;
   justify-content: flex-start;
-  flex: 1;
-  align-content: space-evenly;
 
   & > .narcissus-button {
     margin-right: 15px;

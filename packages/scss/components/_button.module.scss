@@ -2,15 +2,42 @@
 @use '../acss/mp' as mp;
 @use '../base/index.scss' as baseVar;
 
-.narcissus-button {
-  display: inline-block;
-  line-height: 1;
-  white-space: nowrap;
-  cursor: pointer;
-  background-color: white;
-  border: 1px solid #230, 230, 230;
-  border-radius: 5%;
-  -webkit-appearance: none;
-  color: #000;
+$button-height: 40px;
+$button-padding: 8px 12px;
+// primary color
+$color-primary-bgc: rgb(71, 149, 254);
+$color-primary-hover: rgb(19, 112, 235);
+$color-primary-hover-border:  rgb(71, 149, 254);
+$color-primary-disabled:  rgba(10, 106, 231, 0.849);
+$color-primary: #fff;
+// warn color
+$color-warn-bgc: rgba(243, 212, 34, 0.884);
+$color-warn-hover-bgc: rgb(255, 190, 13);
+$color-warn-border: rgb(255, 230, 162);
+$color-warn-hover-border:  rgb(243, 208, 111);
+$color-warn-disabled: rgb(238, 238, 78);
+$color-warn: #fff;
+// error color
+$color-error-bgc: rgba(245, 50, 50, 0.829);
+$color-error-hover-bgc: rgb(245, 9, 9);
+$color-error-border: rgb(248, 52, 52);
+$color-error-hover-border: rgb(247, 111, 111);
+$color-error-disabled: rgba(200, 0, 0, 0.5);
+$color-error: #fff;
+// size相关
+$size-mini-height: 30px;
+$size-mini-padding: 2px 4px;
+$size-small-height: 35px;
+$size-small-padding: 4px 8px;
+$size-medium-height: 38px;
+$size-medium-padding: 6px 10px;
 
-}
+// loading相关
+$loading-mini-width: 6px;
+$loading-mini-height: 6px;
+$loading-small-width: 8px;
+$loading-small-height: 8px;
+$loading-medium-width: 10px;
+$loading-medium-height: 10px;
+$loading-default-width: 13px;
+$loading-default-height: 13px;

@@ -1,6 +1,5 @@
 <script lang="ts" setup name="narcissus-button">
 import { computed, ref } from 'vue';
-import '../../scss/components/_button.module.scss';
 import { buttonProps } from './types';
 const props = defineProps(buttonProps);
 // 注入
@@ -23,23 +22,45 @@ const buttonSize = computed(() => {
     [`narcissus-button--${props.size}`]: props.size,
   };
 });
+
+// loading状态
+const loading = computed(() => {
+  return props.loading;
+});
+
+// loading定制样式
+const loadingStyle = computed(() => {
+  return buttonStyle.value ? { [`loading--${props.type}`]: props.type } : '';
+});
+
+// loading定制大小
+const loadingSize = computed(() => {
+  return buttonSize.value ? { [`loading--${props.size}`]: props.size } : '';
+});
 </script>
 
 <template>
   <button
     :class="[buttonStyle, { disabled: disabled }, buttonSize]"
     class="narcissus-button"
-    :disabled="disabled"
+    :disabled="disabled || loading"
   >
-    <slot />
+    <i
+      v-if="loading"
+      :class="[loadingStyle, loadingSize]"
+      class="loading"
+    />
+    <span><slot /></span>
   </button>
 </template>
 
 <style scoped lang="scss">
+@import '../../scss/components/_button.module.scss';
+
 .narcissus-button {
   display: inline-block;
   white-space: nowrap;
-  line-height: 1;
+  line-height: calc(#{$button-height} / 2);
   height: 40px;
   cursor: pointer;
   background-color: #fff;
@@ -63,35 +84,34 @@ const buttonSize = computed(() => {
   }
 
   &--medium  {
-    height: 38px;
-    line-height: 15px;
-    padding: 6px 10px;
+    height: $size-medium-height;
+    padding: $size-medium-padding;
   }
 
   &--small  {
-    height: 35px;
-    padding: 4px 8px;
+    height: $size-small-height;
+    padding: $size-small-padding;
   }
 
   &--mini  {
-    height: 30px;
-    padding: 2px 4px;
+    height: $size-mini-height;
+    padding: $size-mini-padding;
   }
 
   &--primary {
-    color: #fff;
-    background-color: rgb(71, 149, 254);
-    border-color: white;
+    color: $color-primary;
+    background-color: $color-primary-bgc;
+    border-color: $color-primary;
 
     &:hover {
-      background: rgb(19, 112, 235);
-      border-color: rgb(71, 149, 254);
-      color: #fff;
+      background: $color-primary-hover;
+      border-color: $color-primary-hover-border;
+      color: $color-primary;
     }
   }
 
   &--primary.disabled {
-    background-color: rgba(10, 106, 231, 0.849);
+    background-color: $color-primary-disabled;
     border: 1px solid #fff;
   }
 
@@ -108,33 +128,90 @@ const buttonSize = computed(() => {
 
   &--warn {
     color: #fff;
-    background-color: rgba(243, 212, 34, 0.884);
-    border-color: rgb(255, 230, 162);
+    background-color: $color-warn-bgc;
+    border-color: $color-warn-border;
     &:hover {
-      border: 1px solid  rgb(243, 208, 111);
-      background-color: rgb(255, 190, 13);
+      border: 1px solid $color-warn-hover-border;
+      background-color: $color-warn-hover-bgc;
     }
   }
 
   &--warn.disabled {
-    background-color: rgb(238, 238, 78);
+    background-color: $color-warn-disabled;
     border: 1px solid  rgb(255, 255, 255);
   }
 
   &--error {
     color: #fff;
-    border-color: rgb(248, 52, 52);
-    background-color: rgba(245, 50, 50, 0.829);
+    border-color:$color-error-border;
+    background-color: $color-error-bgc;
     &:hover {
-      border: 1px solid rgb(247, 111, 111);
-      background-color:  rgb(245, 9, 9);
+      border: 1px solid $color-error-hover-border;
+      background-color:  $color-error-hover-bgc;
     }
   }
 
   &--error.disabled {
-    background-color: rgba(200, 0, 0, 0.5);
+    background-color: $color-error-disabled;
     border: 1px solid  rgb(255, 255, 255);
   }
+
+  // loading相关
+  .loading {
+    border: 2px solid rgba(189, 179, 179, 0.5);
+    border-top: 2px solid black;
+    border-radius: 50%;
+    width: $loading-default-width;
+    height: $loading-default-height;
+    animation: spin 1s linear infinite;
+    margin-right: 8px;
+    display: inline-block;
+
+    &--primary {
+      border:  2px solid #fff;
+      border-top: 2px solid $color-primary-bgc;
+    }
+
+    &--warn {
+      border:  2px solid #fff;
+      border-top: 2px solid $color-warn-bgc;
+    }
+
+    &--error {
+      border:  2px solid #fff;
+      border-top: 2px solid $color-error-bgc;
+    }
+
+    &--mini {
+      width: $loading-mini-width;
+      height: $loading-mini-height;
+    }
+
+    &--small {
+      width: $loading-small-width;
+      height: $loading-small-height;
+    }
+
+    &--medium {
+      width: $loading-medium-width;
+      height: $loading-medium-height;
+    }
+
+    &--mini {
+      width: $loading-mini-width;
+      height: $loading-mini-height;
+    }
+
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
 }
 
 </style>

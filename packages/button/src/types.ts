@@ -16,6 +16,11 @@ export const buttonProps = {
     type: String,
     default: '',
   },
+  loading: {
+    required: false,
+    type: Boolean,
+    default: false,
+  },
 } as const;
 
 export type ButtonProps = ExtractPropTypes<typeof buttonProps>;

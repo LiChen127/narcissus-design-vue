@@ -15,8 +15,7 @@
   "dependencies": {
     "@narcissus-design-vue/narcissus-design-vue": "workspace:*",
     "@vitepress-demo-preview/component": "^2.3.2",
-    "@vitepress-demo-preview/plugin": "^1.2.3",
-    "element-plus": "^2.8.6"
+    "@vitepress-demo-preview/plugin": "^1.2.3"
   },
   "devDependencies": {
     "minimist": "^1.2.8",

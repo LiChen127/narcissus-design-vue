@@ -6,7 +6,6 @@ import { ComponentInfo } from '../domain/component-info';
 
 export const sfcTemplate = (lineNameWithPrefix: string, lowCamelName: string): string => {
   return `<script lang="ts" setup name="${lineNameWithPrefix}">
-import { defineProps } from 'vue';
 import { ${lowCamelName}Props } from './types';
 
 defineProps(${lowCamelName}Props);
@@ -73,8 +72,7 @@ export type ${upCamelName}Props = ExtractPropTypes<typeof ${lowCamelName}Props>;
 export const indexTemplate = (componentInfo: ComponentInfo): string => {
   const { upCamelName, lineName, lineNameWithPrefix, type } = componentInfo;
 
-  return `
-import ${upCamelName} from './src/${type === 'tsx' ? lineName : lineName + '.' + type}'
+  return `import ${upCamelName} from './src/${type === 'tsx' ? lineName : lineName + '.' + type}'
 import { App } from 'vue';
 ${type === 'vue' ? `\n${upCamelName}.name = '${lineNameWithPrefix}'\n` : ''}
 ${upCamelName}.install = (app: App): void => {

@@ -1,0 +1,16 @@
+@use '../tools//index.scss' as tools;
+@use '../acss/mp' as mp;
+@use '../base/index.scss' as baseVar;
+
+.narcissus-button {
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid #230, 230, 230;
+  border-radius: 5%;
+  -webkit-appearance: none;
+  color: #000;
+
+}

@@ -22,7 +22,7 @@ export const initComponent = (componentInfo: ComponentInfo) => new Promise((reso
     updatePackageJson(componentInfo);
 
     // 4.安装utils依赖
-    execCmd(`cd ${componentInfo.fullPath} && pnpm install @${Config.COMPONENT_LIB_NAME}/utils --link-workspace-packages=true`);
+    execCmd(`cd ${componentInfo.fullPath} && pnpm add @${Config.COMPONENT_LIB_NAME}/utils --link-workspace-packages=true`);
 
     // 5.创建组件src目录
     fs.mkdirSync(path.resolve(componentInfo.fullPath, 'src'));

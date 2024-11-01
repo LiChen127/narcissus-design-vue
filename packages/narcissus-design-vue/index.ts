@@ -1,3 +1,6 @@
+import Button from '@narcissus-design-vue/button'
+,
+  Button
 import { App } from 'vue';
 import Foo from '@narcissus-design-vue/foo';
 

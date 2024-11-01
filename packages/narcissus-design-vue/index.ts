@@ -1,9 +1,8 @@
 import Button from '@narcissus-design-vue/button';
 
 import { App } from 'vue';
-import Foo from '@narcissus-design-vue/foo';
 
-const components = [Foo, Button];
+const components = [Button];
 
 const install = (app: App): void => {
   components.forEach((component) => {

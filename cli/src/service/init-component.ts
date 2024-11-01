@@ -17,7 +17,7 @@ export const initComponent = (componentInfo: ComponentInfo) => new Promise((reso
   fs.mkdirSync(componentInfo.fullPath);
 
   // 2.初始化package.json
-  execCmd(`cd ${componentInfo.fullPath} && pnpm init`).then((r) => {
+  execCmd(`cd ${componentInfo.fullPath} && pnpm init`).then(() => {
     // 3.修改package.json
     updatePackageJson(componentInfo);
 

@@ -11,7 +11,7 @@
 
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 |  ----  | ----  | ----  | ----  | ----  |
-|  |  |  |  | |
+|  type| 定义按钮类型  | String  | primary, dashed, warn, error|  |
 
 ### Methods 方法
 

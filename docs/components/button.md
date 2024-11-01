@@ -11,10 +11,10 @@
 
 ## size状态
 <preview path="../demos/button/button-3.vue" title="使用样例" description=" "></preview>
-## 组件 API
 
 ## loading状态
 <preview path="../demos/button/button-4.vue" title="使用样例" description=" "></preview>
+
 ## 组件 API
 ### Attributes 属性
 

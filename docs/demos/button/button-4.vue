@@ -19,7 +19,7 @@
       medium-loading
     </narcissus-button>
     <narcissus-button
-      type="warn"
+      type="error"
       loading="true"
     >
       default-loading

@@ -85,16 +85,19 @@ const loadingSize = computed(() => {
 
   &--medium  {
     height: $size-medium-height;
+    line-height: calc(#{$button-height} / 2);
     padding: $size-medium-padding;
   }
 
   &--small  {
     height: $size-small-height;
+    line-height: calc(#{$button-height} / 2);
     padding: $size-small-padding;
   }
 
   &--mini  {
     height: $size-mini-height;
+    line-height: calc(#{$button-height} / 2);
     padding: $size-mini-padding;
   }
 

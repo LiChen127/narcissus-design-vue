@@ -1,5 +1,5 @@
 <script lang="ts" setup name="narcissus-button">
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 import '../../scss/components/_button.module.scss';
 import { buttonProps } from './types';
 const props = defineProps(buttonProps);
@@ -11,12 +11,25 @@ const buttonStyle = computed(() => {
     [`narcissus-button--${props.type}`]: props.type,
   };
 });
+
+// 是否禁用
+const disabled = computed(() => {
+  return props.disabled;
+});
+
+// // 禁用样式
+// const disabledStyle = computed(() => {
+//   return {
+//     [`narcissus-button--${props.type}`]: props.type,
+//   };
+// });
 </script>
 
 <template>
   <button
-    :class="buttonStyle"
+    :class="[buttonStyle, { disabled: disabled }]"
     class="narcissus-button"
+    :disabled="disabled"
   >
     <slot />
   </button>
@@ -37,42 +50,71 @@ const buttonStyle = computed(() => {
   padding: 8px 12px;
   font-weight: 500;
   transition: 0.1s;
-}
 
-.narcissus-button--primary {
-  color: #fff;
-  background-color: rgb(71, 149, 254);
-  border-color: white;
+  &.disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    border: 1px solid  rgba(51, 40, 40, 0.5);
+    background-color:  rgba(189, 179, 179, 0.5);
+  }
 
-  &:hover {
-    background: rgb(19, 112, 235);
-    border-color: rgb(71, 149, 254);
+  &--primary {
     color: #fff;
+    background-color: rgb(71, 149, 254);
+    border-color: white;
+
+    &:hover {
+      background: rgb(19, 112, 235);
+      border-color: rgb(71, 149, 254);
+      color: #fff;
+    }
   }
-}
-.narcissus-button--dashed {
-  &:hover{
-    border: 1px dashed #000;
+
+  &--primary.disabled {
+    background-color: rgba(10, 106, 231, 0.849);
+    border: 1px solid #fff;
+  }
+
+  &--dashed {
+    &:hover{
+      border: 1px dashed #000;
+    }
+  }
+
+  &---dashed.disabled {
+    border: 1px dashed rgba(51, 40, 40, 0.5);
+    background-color: #c404044d;
+  }
+
+  &--warn {
+    color: #fff;
+    background-color: rgba(243, 212, 34, 0.884);
+    border-color: rgb(255, 230, 162);
+    &:hover {
+      border: 1px solid  rgb(243, 208, 111);
+      background-color: rgb(255, 190, 13);
+    }
+  }
+
+  &--warn.disabled {
+    background-color: rgb(238, 238, 78);
+    border: 1px solid  rgb(255, 255, 255);
+  }
+
+  &--error {
+    color: #fff;
+    border-color: rgb(248, 52, 52);
+    background-color: rgba(245, 50, 50, 0.829);
+    &:hover {
+      border: 1px solid rgb(247, 111, 111);
+      background-color:  rgb(245, 9, 9);
+    }
+  }
+
+  &--error.disabled {
+    background-color: rgba(200, 0, 0, 0.5);
+    border: 1px solid  rgb(255, 255, 255);
   }
 }
 
-.narcissus-button--warn {
-  color: #fff;
-  background-color: rgba(243, 212, 34, 0.884);
-  border-color: rgb(255, 230, 162);
-  &:hover {
-    border: 1px solid  rgb(243, 208, 111);
-    background-color: rgb(255, 190, 13);
-  }
-}
-
-.narcissus-button--error {
-  color: #fff;
-  border-color: rgb(248, 52, 52);
-  background-color: rgba(245, 50, 50, 0.829);
-  &:hover {
-    border: 1px solid rgb(247, 111, 111);
-    background-color:  rgb(245, 9, 9);
-  }
-}
 </style>

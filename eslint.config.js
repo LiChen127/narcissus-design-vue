@@ -82,7 +82,7 @@ export default tseslint.config(
   {
     files: ['**/*.{ts,tsx,vue}'],
     rules: {
-      semi: ['error', 'always'],
+      semi: ['warn', 'always'],
     },
   },
 );

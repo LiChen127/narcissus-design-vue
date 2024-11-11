@@ -39,7 +39,7 @@ export default defineConfig({
     siteTitle: 'NARCISSUS-DESIGN-VUE',
     outline: 3,
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' },
+      { icon: 'github', link: 'https://github.com/LiChen127/narcissus-design-vue' },
     ],
     nav,
     sidebar,

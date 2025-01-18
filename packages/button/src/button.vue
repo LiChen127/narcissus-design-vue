@@ -1,5 +1,5 @@
 <script lang="ts" setup name="narcissus-button">
-import { computed, ref } from 'vue';
+import { computed } from 'vue';
 import { buttonProps } from './types';
 const props = defineProps(buttonProps);
 // 注入

@@ -1,9 +1,10 @@
+import Anchor from '@narcissus-design-vue/anchor';
 import Divider from '@narcissus-design-vue/divider';
 import Button from '@narcissus-design-vue/button';
 
 import { App } from 'vue';
 
-const components = [Button, Divider];
+const components = [Button, Divider, Anchor];
 
 const install = (app: App): void => {
   components.forEach((component) => {
